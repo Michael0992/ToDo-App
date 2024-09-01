@@ -1,0 +1,122 @@
+
+
+#root{
+  min-height: 100vh;
+}
+
+.noteMenu{
+  background-color: #0050c765;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 10px 10px 30px 10px;
+  gap: 20px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px 5px black;
+
+  input{
+    background-color: white;
+    color: darkblue;
+    max-height: 40px;
+  }
+
+  textarea{
+    resize: none;
+    align-self: flex-end;
+    background-color: white;
+    color:darkblue;
+  }
+
+  button{
+    position: relative;
+    background-color: #213064;
+    color: white;
+    border: white 2px solid;
+  }
+}    
+    
+
+
+.newNotes {
+  border: solid #00ff00;
+}
+
+.currentNotes {
+  border: solid #ff0062;
+  box-shadow: 0 0 15px 5px rgb(255, 0, 128);
+}
+
+.oldNotes {
+  border: solid #5e5e5e;
+}
+
+.newNotes , .currentNotes , .oldNotes {
+  background-color: rgba(255, 255, 255, 0.116);
+  border-radius: 20px;
+  border-width: 2px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.note{
+  width: 20vw;
+  word-wrap: break-word;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 0 5px black;
+
+}
+
+.noteBoard{
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.noteHead{
+  background-color: black;
+  padding: 0px 5px;
+
+  button{
+    background-color: red;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 5px;
+    top: 5px;
+    padding: 0;
+    border: none;
+
+    img{
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      filter:invert();
+    }
+  }
+
+  button:hover{
+    border: none;
+    box-shadow: 0 0 5px red, 0 0 20px red;
+  }
+}
+
+.noteBody{
+  overflow-y: auto;
+  max-height: 200px;
+  padding: 0px 20px;
+
+  pre{
+    white-space: pre-wrap; /* Aktiviert den automatischen Umbruch */
+    word-wrap: break-word; /* Erlaubt den Umbruch von langen Wörtern */
+    overflow-wrap: break-word;
+  }
+}
