@@ -11,7 +11,7 @@ function AlarmToggle({ notes }) {
 
   // useRef wird verwendet, um ein Audio-Objekt zu erstellen und zu speichern.
   // Das Audio-Objekt bleibt während der gesamten Lebensdauer der Komponente gleich, sodass es nicht bei jedem Rendern neu erstellt wird.
-  const audioRef = useRef(new Audio('https://drive.google.com/uc?export=download&id=1Ci3ht5OQv481ueYfv8uKayt_wQ-e3Ake'));
+  const audioRef = useRef(new Audio('${process.env.PUBLIC_URL}/alarm-sound.mp3'));
 
   // useEffect-Hook, der einmal beim Initialisieren der Komponente ausgeführt wird.
   // Setzt die `loop`-Eigenschaft des Audio-Objekts auf `true`, sodass die Audiodatei in einer Schleife wiederholt abgespielt wird.
